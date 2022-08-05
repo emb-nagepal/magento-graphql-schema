@@ -17,10 +17,10 @@ async function makeGatewaySchema() {
   //const productsExec = makeRemoteExecutor('http://localhost:4001/graphql');
   //const storefrontsExec = makeRemoteExecutor('http://localhost:4002/graphql');
   //const rainforestApiExec = makeRemoteExecutor('http://localhost:4001/graphql');
-  const wordpresssiteApiExec = makeRemoteExecutor('http://wordpresssite.com/graphql');
+  //const wordpresssiteApiExec = makeRemoteExecutor('http://wordpresssite.com/graphql');
   //const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('http://pwastudiodemomagento.com/graphql');
-const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('http://demomagento.com/graphql');
-  //const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('https://master-7rqtwti-mfwmkrjfqvbjk.us-4.magentosite.cloud/graphql');
+  //const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('http://demomagento.com/graphql');
+  const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('https://master-7rqtwti-mfwmkrjfqvbjk.us-4.magentosite.cloud/graphql');
  // const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('https://integration-5ojmyuq-23txbi6folvo6.ap-3.magentosite.cloud/graphql');
   const adminContext = { authHeader: 'Bearer my-app-to-app-token' };
 
@@ -40,6 +40,7 @@ const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('http://demomagento.com/g
         schema: buildSchema(await fetchRemoteSDL(storefrontsExec, adminContext)),
         executor: storefrontsExec,
       },*/
+      /*
       {
         // 3. Integrate a schema that conflicts with another schema.
         // Let's pretend that "Rainforest API" executor talks to an API that
@@ -53,7 +54,7 @@ const pwaStudioDemoMagentoApiExec = makeRemoteExecutor('http://demomagento.com/g
           new RenameTypes((name) => `WP${name}`),
           new RenameRootFields((op, name) => `wp${name.charAt(0).toUpperCase()}${name.slice(1)}`),
         ]
-      },
+      },*/
       /*
       {
         // 3. Integrate a schema that conflicts with another schema.
